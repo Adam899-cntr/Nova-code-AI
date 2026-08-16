@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nova Code AI</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+
+  <aside class="sidebar">
+
+    <div class="logo">
+      <span>✦</span>
+      <b>Nova</b>
+      <small>CODE AI</small>
+    </div>
+
+    <button class="new-project" id="newProject">
+      ＋ Новый проект
+    </button>
+
+    <div class="label">
+      WORKSPACE
+    </div>
+
+    <button class="nav active">
+      ⌂
+      <span>Главная</span>
+    </button>
+
+    <button class="nav">
+      ◈
+      <span>Проекты</span>
+    </button>
+
+    <button class="nav">
+      ◫
+      <span>Шаблоны</span>
+    </button>
+
+    <div class="label">
+      TOOLS
+    </div>
+
+    <button class="nav">
+      ⌘
+      <span>AI Agents</span>
+    </button>
+
+    <button class="nav">
+      ◉
+      <span>Публикации</span>
+    </button>
+
+    <button class="nav">
+      ⚙
+      <span>Настройки</span>
+    </button>
+
+    <div class="sidebar-bottom">
+
+      <div class="usage">
+
+        <div class="usage-top">
+          <span>AI usage</span>
+          <b>24%</b>
+        </div>
+
+        <div class="progress">
+          <div></div>
+        </div>
+
+        <small>
+          1 240 / 5 000 credits
+        </small>
+
+      </div>
+
+      <div class="profile">
+
+        <div class="avatar">
+          A
+        </div>
+
+        <div>
+          <b>Adlan</b>
+          <small>Free workspace</small>
+        </div>
+
+        <span>•••</span>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- MAIN -->
+
+  <main>
+
+    <header class="topbar">
+
+      <div class="breadcrumbs">
+
+        Workspace
+
+        <span>/</span>
+
+        <b id="projectName">
+          Новый проект
+        </b>
+
+      </div>
+
+      <div class="top-actions">
+
+        <button class="icon-button">
+          ⌘ K
+        </button>
+
+        <button class="icon-button">
+          ◐
+        </button>
+
+        <button
+          class="publish"
+          id="publish"
+        >
+          Publish ↗
+        </button>
+
+      </div>
+
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        ✦ THE NEXT GENERATION OF WEB CREATION
+      </div>
+
+      <h1>
+        Создай что угодно.
+        <br>
+        <span>Просто опиши.</span>
+      </h1>
+
+      <p>
+        Nova превращает твою идею в настоящий
+        веб-проект с кодом, дизайном и Live Preview.
+      </p>
+
+
+      <!-- AI PROMPT -->
+
+      <div class="composer">
+
+        <textarea
+          id="prompt"
+          placeholder="Опиши сайт, который хочешь создать...
+
+Например: создай современный сайт футбольной академии с игроками, расписанием и красивой тёмной анимацией."
+        ></textarea>
+
+
+        <div class="composer-bottom">
+
+          <div class="modes">
+
+            <button class="mode active">
+              ⚡ Build
+            </button>
+
+            <button class="mode">
+              🎨 Design
+            </button>
+
+            <button class="mode">
+              🐛 Fix
+            </button>
+
+            <button class="mode">
+              📱 Mobile
+            </button>
+
+          </div>
+
+          <button
+            class="build"
+            id="build"
+          >
+            Создать с Nova
+            ↗
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- QUICK PROMPTS -->
+
+      <div class="quick">
+
+        <button
+          data-prompt="Создай современный лендинг технологической компании с красивой анимацией."
+        >
+
+          ◈
+
+          <div>
+            <b>Startup</b>
+            <small>
+              Лендинг компании
+            </small>
+          </div>
+
+        </button>
+
+
+        <button
+          data-prompt="Создай современный интернет-магазин с товарами, корзиной и мобильной версией."
+        >
+
+          ◇
+
+          <div>
+            <b>Магазин</b>
+            <small>
+              E-commerce
+            </small>
+          </div>
+
+        </button>
+
+
+        <button
+          data-prompt="Создай красивую админ-панель со статистикой, графиками и боковым меню."
+        >
+
+          ▦
+
+          <div>
+            <b>Dashboard</b>
+            <small>
+              Панель управления
+            </small>
+          </div>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- AI WORKSPACE -->
+
+    <section class="workspace">
+
+      <div class="workspace-header">
+
+        <div>
+
+          <b>
+            AI Workspace
+          </b>
+
+          <small>
+            Код и результат проекта
+          </small>
+
+        </div>
+
+        <button id="previewButton">
+          ▶ Preview
+        </button>
+
+      </div>
+
+
+      <div class="editor">
+
+        <!-- FILES -->
+
+        <div class="files">
+
+          <button
+            class="file active"
+            data-file="html"
+          >
+            HTML
+          </button>
+
+          <button
+            class="file"
+            data-file="css"
+          >
+            CSS
+          </button>
+
+          <button
+            class="file"
+            data-file="js"
+          >
+            JS
+          </button>
+
+        </div>
+
+
+        <!-- CODE -->
+
+        <pre id="code"><code>
+Здесь появится код проекта после генерации.
+        </code></pre>
+
+
+        <!-- PREVIEW -->
+
+        <div
+          class="preview"
+          id="preview"
+        >
+
+          <div>
+
+            <strong>
+              Live Preview
+            </strong>
+
+            <small>
+              Создай проект,
+              чтобы увидеть результат.
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</div>
+
+
+<div
+  class="toast"
+  id="toast"
+></div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
